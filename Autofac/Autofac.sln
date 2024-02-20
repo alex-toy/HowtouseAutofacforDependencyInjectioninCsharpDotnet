@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac", "Autofac\Autofac.csproj", "{651D39EC-14CA-4DE8-BFC4-CECB9805A7C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependenciesMess", "DependenciesMess\DependenciesMess.csproj", "{B84D86BE-BB6D-4A25-8BA9-6D7B60D538E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlDependencies", "UrlDependencies\UrlDependencies.csproj", "{5E98E516-6428-45A9-8BB3-3AA0D6E23453}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{651D39EC-14CA-4DE8-BFC4-CECB9805A7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{651D39EC-14CA-4DE8-BFC4-CECB9805A7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{651D39EC-14CA-4DE8-BFC4-CECB9805A7C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84D86BE-BB6D-4A25-8BA9-6D7B60D538E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84D86BE-BB6D-4A25-8BA9-6D7B60D538E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84D86BE-BB6D-4A25-8BA9-6D7B60D538E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84D86BE-BB6D-4A25-8BA9-6D7B60D538E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E98E516-6428-45A9-8BB3-3AA0D6E23453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E98E516-6428-45A9-8BB3-3AA0D6E23453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E98E516-6428-45A9-8BB3-3AA0D6E23453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E98E516-6428-45A9-8BB3-3AA0D6E23453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
