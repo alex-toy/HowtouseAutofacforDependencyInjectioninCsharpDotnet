@@ -3,7 +3,7 @@ using UrlDependencies;
 
 namespace UrlAutofac
 {
-    public sealed class MyModule : System.Reflection.Module
+    public sealed class MyModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

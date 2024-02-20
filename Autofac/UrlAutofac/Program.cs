@@ -1,14 +1,33 @@
 ﻿using Autofac;
+using UrlAutofac;
 using UrlDependencies;
 
 Console.WriteLine("Autofac");
 
-ContainerBuilder containerBuilder = new();
-
-using IContainer container  = containerBuilder.Build();
-using ILifetimeScope scope = container.BeginLifetimeScope();
-
-
-AwesomeUrlSaver urlSaver = scope.Resolve<AwesomeUrlSaver>();
-
+AwesomeUrlSaver urlSaver = GetUrlSaver();
 await urlSaver.SaveUrlsAsync("https://www.devleader.ca", "urls.txt");
+
+SomeComposedClass SomeSpotInYourCode()
+{
+    AwesomeUrlSaver urlSaver = GetUrlSaver();
+    SomeComposedClass someComposedClass = new(urlSaver);
+    return someComposedClass;
+}
+
+void SomeOtherSpotInYourCode()
+{
+    AwesomeUrlSaver urlSaver = GetUrlSaver();
+
+    SomeComposedClass2 someComposedClass2 = new(urlSaver);
+    someComposedClass2.DoStuff();
+}
+
+static AwesomeUrlSaver GetUrlSaver()
+{
+    ContainerBuilder containerBuilder = new();
+    containerBuilder.RegisterModule<MyModule>();
+    IContainer container = containerBuilder.Build();
+    ILifetimeScope scope = container.BeginLifetimeScope();
+    AwesomeUrlSaver urlSaver = scope.Resolve<AwesomeUrlSaver>();
+    return urlSaver;
+}
