@@ -1,4 +1,4 @@
-﻿namespace Autofac
+﻿namespace UrlDependencies
 {
     public class SomeComposedClass
     {
